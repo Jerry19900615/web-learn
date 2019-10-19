@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>盒子模型</title>
+        <style>
+        .content-div {width: 500px; height: 200px; background: green;}
+        .sub-div{width:100px; height: 100%; background: red; float: left;}
+        #exp{width:258px; background: blue; float: left; height: 100px; padding: 10px; margin: 0 10px;border: solid 1px yellow;}  /**/
+        </style>
+    </head>
+    <body>
+        <p>html里所有的元素都是一个盒子,构成这个盒子的一些属性有padding,border,margin(由内到外)，最中间是盒子的内容</p>
+        <p>一个盒子的实际宽度，左右margin+左右border+左右padding+内容的实际宽度,比如下面这个例子</p>
+        <div class="content-div">
+            <div class="sub-div"></div>
+            <div id="exp">这里是内容</div>
+            <div class="sub-div"></div>
+        </div>
+        
+    </body>
+</html>
