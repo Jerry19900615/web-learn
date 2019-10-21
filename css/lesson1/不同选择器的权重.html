@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>不同选择器的权重</title>
+        <style>
+            /*权重由三个连接在一起的数字*/
+            #div-green{background: green;} /*id选择器的权重高于class选择器*/
+            .red{background: red;}   /*class选择器的权重高于type选择器*/
+            div{width: 100px; height: 100px; background: blue;}
+            .btn{font-size: 16px;}
+            .btn-danger{background: red;}
+            .btn-safe{background: green;}    
+            .task{width: 20px; height: 20px; background: rgb(128,0,0);}
+            .task_l{width:20px; height: 20px; background: rgba(128,0,0,.5);}
+        </style>
+    </head>
+    <body>
+        <div id="div-green" class="red">
+        </div>
+
+        <a href="" class="btn btn-danger">警告</a>
+        <a href="" class="btn btn-safe">确定</a>
+
+        <div class="task">
+
+        </div>
+        <div class="task_l"></div>
+    </body>
+</html>
