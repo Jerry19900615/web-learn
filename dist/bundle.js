@@ -1,0 +1,1 @@
+(()=>{"use strict";alert(5),alert(undefined)})();

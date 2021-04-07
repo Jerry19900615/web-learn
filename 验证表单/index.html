@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST" action="" onsubmit="return eg.regCheck()">
+        账户：<input name="" type="text" id='userName'> <br><br>
+        密码：<input name="" type="password" id="password"> <br><br>
+        确认：<input name="" type="password" id="password1"> <br><br>
+        <input type="submit" value="注册">
+    </form>
+    <script type="text/javascript">
+    "use strict"
+    var eg = {};
+
+    eg.$ = function(id) {
+        return document.getElementById(id);
+    }
+    eg.regCheck = function(){
+        var userName = eg.$("userName");
+        var password = eg.$("password");
+        var password1 = eg.$("password1");
+
+        if(userName.value == ''){
+            alert("用户名不能为空!");
+            return false;
+        }
+        if(password.value == ''){
+            alert('密码不能为空');
+            return false;
+        }
+        if(password1.value != password.value) {
+            alert('确认密码和密码不一致');
+            return false;
+        }
+        return true;
+    }
+    </script>
+</body>
+</html>
